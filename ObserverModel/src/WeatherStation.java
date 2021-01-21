@@ -2,6 +2,8 @@
  * @author £ºsummerain
  * @date £ºCreated in 2021/1/21 4:59 ÏÂÎç
  */
+
+
 public class WeatherStation {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
