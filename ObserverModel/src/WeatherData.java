@@ -5,13 +5,13 @@ import java.util.ArrayList;
  * @author £ºsummerain
  * @date £ºCreated in 2021/1/20 5:11 ÏÂÎç
  */
-public class WheatherData implements Subject{
+public class WeatherData implements Subject{
     private ArrayList observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
-    public WheatherData(){
+    public WeatherData(){
         observers = new ArrayList();
     }
 
@@ -36,11 +36,16 @@ public class WheatherData implements Subject{
         }
     }
 
+    public void measurementsChanged(){
+        notifyObserver();
+    }
 
-
-
-
-
+    public void setMeasurements(float temperature, float humidity, float pressure){
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        measurementsChanged();
+    }
 
 
 }
